@@ -1,0 +1,72 @@
+CREATE TABLE changelog (
+  changelog_id int NOT NULL,
+  issue_id int NOT NULL,
+  user_id int NOT NULL,
+  comment clob(9000) NOT NULL,
+  PRIMARY KEY (changelog_id)
+);
+
+
+CREATE TABLE issue (
+  issue_id int  NOT NULL,
+  project_id int  NOT NULL,
+  owner_id int  NOT NULL,
+  created_on DATE NOT NULL,
+  assignee_id int  NOT NULL,
+  identified_by_id int  NOT NULL,
+  identified_date DATE NOT NULL,
+  status_id int  NOT NULL,
+  priority_id int  NOT NULL,
+  title varchar(255) NOT NULL,
+  description_full clob(9000),
+  description_summary clob(9000),
+  resolution_date_target DATE,
+  resolution_date_actual DATE,
+  PRIMARY KEY (issue_id)
+);
+
+CREATE TABLE priority (
+  priority_id int NOT NULL,
+  priority_name varchar(100) NOT NULL,
+  PRIMARY KEY (priority_id)
+);
+
+CREATE TABLE project (
+  project_id int NOT NULL,
+  project_name varchar(255) NOT NULL,
+  date_start date NOT NULL,
+  date_end date NOT NULL,
+  date_end_actual date NOT NULL,
+  PRIMARY KEY (project_id)
+);
+
+
+CREATE TABLE role (
+  role_id int NOT NULL,
+  role_name varchar(255) NOT NULL,
+  PRIMARY KEY (role_id)
+);
+
+
+
+CREATE TABLE status (
+  status_id int NOT NULL,
+  status_name varchar(100) NOT NULL,
+  PRIMARY KEY (status_id)
+);
+
+
+CREATE TABLE users (
+  user_id int NOT NULL,
+  role_id int NOT NULL,
+  username varchar(255) NOT NULL,
+  first_name varchar(150) NOT NULL,
+  last_name varchar(150) NOT NULL,
+  email varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  created_at date NOT NULL,
+  PRIMARY KEY (user_id)
+);
+
+
+

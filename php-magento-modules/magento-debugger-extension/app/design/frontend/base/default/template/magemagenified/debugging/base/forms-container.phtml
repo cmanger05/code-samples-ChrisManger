@@ -1,0 +1,19 @@
+<?php
+/**
+ * @category    Blockinformation
+ * @package     Magenifieddebugging
+ * @author   	Chris Manger (chris-manger.com)
+ *
+ * @var $this Mage_Core_Block_Template
+ */
+?>
+<div id="magemagenified-debugging-forms-container">
+    <div class="forms-wrapper">
+            <h1>Find a block</h1>
+            <?php echo $this->getChildHtml('form.search.by.name') ?>
+            <?php echo $this->getChildHtml('form.search.by.text') ?>
+            <?php echo $this->getChildHtml('display.request.information') ?>
+            <?php echo $this->getChildHtml('display.plp.information') ?>
+        <br class="float-clearer" />
+    </div>
+</div>

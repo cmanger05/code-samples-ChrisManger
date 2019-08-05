@@ -1,0 +1,51 @@
+INSERT INTO status(status_id,status_name)
+VALUES(1,'New');
+INSERT INTO status(status_id,status_name)
+VALUES(2,'In Progress');
+INSERT INTO status(status_id,status_name)
+VALUES(3,'Code Complete');
+INSERT INTO status(status_id,status_name)
+VALUES(4,'QA Review');
+INSERT INTO status(status_id,status_name)
+VALUES(5,'Fixed');
+
+INSERT INTO priority(priority_id,priority_name)
+VALUES(1,'High');
+INSERT INTO priority(priority_id,priority_name)
+VALUES(2,'Medium');
+INSERT INTO priority(priority_id,priority_name)
+VALUES(3,'Low');
+
+INSERT INTO role(role_id,role_name)
+VALUES(1,'Project Manager');
+INSERT INTO role(role_id,role_name)
+VALUES(2,'Tester');
+INSERT INTO role(role_id,role_name)
+VALUES(3,'Developer');
+INSERT INTO role(role_id,role_name)
+VALUES(4,'Client');
+
+INSERT INTO users(user_id,role_id,username,first_name,last_name,email,password,created_at)
+VALUES(1,1,'sai','Sai','Garimella','sai@garimella.com','password123','2017-03-05 00:00:00');
+INSERT INTO users(user_id,role_id,username,first_name,last_name,email,password,created_at)
+VALUES(2,2,'allen','Allen','Townsend','allan@townsend.com','password123','2017-03-05 00:00:00');
+INSERT INTO users(user_id,role_id,username,first_name,last_name,email,password,created_at)
+VALUES(3,3,'sanjay','Sanjay','Chopra','sanjay@chopra.com','password123','2017-03-05 00:00:00');
+INSERT INTO users(user_id,role_id,username,first_name,last_name,email,password,created_at)
+VALUES(4,4,'chris','Chris','Manger','chris@manger4.com','password123','2017-03-05 00:00:00');
+
+INSERT INTO project(project_id,project_name,date_start,date_end,date_end_actual)
+VALUES(1,'The Great Courses','2014-10-08 00:00:00','2015-02-08 00:00:00','2015-05-08 00:00:00');
+INSERT INTO project(project_id,project_name,date_start,date_end,date_end_actual)
+VALUES(2,'Baker Hughes Oilfield Operations','2015-07-20 00:00:00','2015-09-01 00:00:00','2015-09-04 00:00:00');
+
+INSERT INTO issue(issue_id,project_id,owner_id,created_on,assignee_id,identified_by_id,identified_date,status_id,priority_id,title)
+VALUES(1,1,1,'2017-01-22 00:00:00',2,3,'2017-01-20 00:00:00',1,3,'Fav Icon not working properly in IE');
+INSERT INTO issue(issue_id,project_id,owner_id,created_on,assignee_id,identified_by_id,identified_date,status_id,priority_id,title)
+VALUES(2,2,3,'2017-01-22 00:00:00',4,4,'2017-01-20 00:00:00',2,2,'Realign Product Images in Order Email');
+
+
+
+
+
+

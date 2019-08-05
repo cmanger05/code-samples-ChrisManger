@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <global>
+        <blocks>
+            <magenifieddebugging_productinformation>
+                <class>Magenifieddebugging_Productinformation_Block</class>
+            </magenifieddebugging_productinformation>
+        </blocks>
+        <helpers>
+            <magenifieddebugging_productinformation>
+                <class>Magenifieddebugging_Productinformation_Helper</class>
+            </magenifieddebugging_productinformation>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <magenifieddebugging_productinformation>
+                    <file>magemagenified/debugging/productinformation.xml</file>
+                </magenifieddebugging_productinformation>
+            </updates>
+        </layout>
+    </frontend>
+</config>

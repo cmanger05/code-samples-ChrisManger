@@ -1,0 +1,63 @@
+<?php //not creating a block to house the apartment model below because this is the only function call.
+$apartmentForm = Mage::getModel('apartment_form/apartment');
+?>
+<div id="apartmentFormContainer">
+    <h1 class="headline">Apartment Form</h1>
+    <form id="apartmentform" method="post">
+        <div class="apartmentFieldContainer">
+            <div class="apartmentFieldLabel"><label class="required"><em>*</em>Name</label></div>
+            <div class="apartmentFieldInput"><input type="text" name="apartment_name" value="<?php echo $apartmentForm->getFieldValue('apartment_name') ?>"></div>
+            <br style="clear: both" />
+        </div>
+
+        <div class="apartmentFieldContainer">
+            <div class="apartmentFieldLabel"><label>Tier</label></div>
+            <div class="apartmentFieldInput">
+                <select name="tier">
+                    <option value="poor">Poor</option>
+                    <option value="ok">Ok</option>
+                    <option value="solid">Solid</option>
+                    <option value="incredibly awesome">Incredibly Awesome</option>
+                </select>
+
+            </div>
+            <br style="clear: both" />
+        </div>
+
+        <div class="apartmentFieldContainer">
+            <div class="apartmentFieldLabel"><label class="required"><em>*</em>Primary Contact Email</label></div>
+            <div class="apartmentFieldInput"><input type="text" name="email_primary" value="<?php echo $apartmentForm->getFieldValue('email_primary') ?>"></div>
+            <br style="clear: both" />
+        </div>
+
+        <div class="apartmentFieldContainer">
+            <div class="apartmentFieldLabel"><label>Year Established</label></div>
+            <div class="apartmentFieldInput"><input type="text" name="year_established" value="<?php echo $apartmentForm->getFieldValue('year_established') ?>"></div>
+            <br style="clear: both" />
+        </div>
+
+        <div class="apartmentFieldContainer">
+            <div class="apartmentFieldLabel"><label class="required"><em>*</em>Number Currrent Residents</label></div>
+            <div class="apartmentFieldInput"><input type="text" name="number_current_residents" value="<?php echo $apartmentForm->getFieldValue('number_current_residents') ?>"></div>
+            <br style="clear: both" />
+        </div>
+
+        <div class="apartmentFieldContainer">
+            <div class="apartmentFieldLabel"><label>Max Occupants</label></div>
+            <div class="apartmentFieldInput"><input type="text" name="max_occupants" value="<?php echo $apartmentForm->getFieldValue('max_occupants') ?>"></div>
+            <br style="clear: both" />
+        </div>
+
+        <div class="buttons-set">
+            <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+            <button type="submit" title="<?php echo $this->__('Save Apartment') ?>" class="button"><span><span><?php echo $this->__('Save Apartment') ?></span></span></button>
+        </div>
+
+        <input type="hidden" name="is_submitted" value="1">
+    </form>
+    <script type="text/javascript">
+        //<![CDATA[
+        var apartmentForm = new VarienForm('apartmentform', true);
+        //]]>
+    </script>
+</div>

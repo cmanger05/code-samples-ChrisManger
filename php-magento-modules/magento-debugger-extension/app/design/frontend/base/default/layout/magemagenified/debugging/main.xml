@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<layout>
+    <default>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/magemagenified/debugging/forms-container.css</stylesheet></action>
+        </reference>
+    </default>
+
+    <magemagenified_debugging_forms>
+        <block type="magenifieddebugging_base/maincontainer" name="debugging_forms_container" output="toHtml" />
+    </magemagenified_debugging_forms>
+</layout>

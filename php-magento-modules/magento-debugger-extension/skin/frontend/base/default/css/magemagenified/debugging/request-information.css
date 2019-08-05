@@ -1,0 +1,50 @@
+div#magemagenified-request-forms-container div.forms-wrapper div.blockFormWrapper {
+    width: 50%;
+    text-align: left;
+}
+
+div.requestInformationFormContainer {
+    position: relative;
+    display: block;
+    width: 800px;
+    margin: 0 auto;
+    padding: 5px;
+    overflow: hidden;
+}
+
+div.requestInformationFormContainer h1 {
+    margin-bottom: 20px;
+}
+
+div.requestInformationFormContainer div.field-container {
+    position: relative;
+    display: block;
+    width: 98.5%;
+    margin: 0 auto 5px auto;
+    padding: 0;
+    min-height: 20px;
+}
+
+div.requestInformationFormContainer div.field-container.handles {
+    height: 160px;
+}
+
+div.requestInformationFormContainer div.field-container div.field-label {
+    position: relative;
+    float: left;
+    width: 40%;
+    min-height: 20px;
+}
+
+div.requestInformationFormContainer div.field-container div.field-label.note {
+    width: 100%;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+div.requestInformationFormContainer div.field-container div.field-input {
+    position: relative;
+    float: left;
+    width: 30%;
+    min-height: 20px;
+}

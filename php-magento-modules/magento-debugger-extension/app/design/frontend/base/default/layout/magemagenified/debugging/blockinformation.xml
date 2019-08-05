@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<layout>
+    <default>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/magemagenified/debugging/block-information.css</stylesheet></action>
+        </reference>
+    </default>
+
+    <magemagenified_debugging_forms>
+        <reference name="debugging_forms_container">
+            <block type="mmdebugging_blockinformation/search_name" name="form.search.by.name" template="magemagenified/debugging/blockinformation/form/search.phtml" />
+            <block type="mmdebugging_blockinformation/search_text" name="form.search.by.text" template="magemagenified/debugging/blockinformation/form/search.phtml" />
+        </reference>
+    </magemagenified_debugging_forms>
+</layout>

@@ -1,0 +1,76 @@
+<?php
+/**
+ * @category    Blockinformation
+ * @package     Magenifieddebugging
+ * @author   	Chris Manger (chris-manger.com)
+ *
+ * @var $this Magenifieddebugging_Requestinformation_Block_Container
+ */
+?>
+<br class="float-clearer" />
+<div class="blockFormWrapper">
+    <h1>Request Information</h1>
+    <table id="debugger-request-information" class="table table-striped" border="3">
+        <tbody>
+            <tr>
+                <td>Controller Class Name:</td>
+                <td><?php echo $this->getControllerClassName() ?></td>
+            </tr>
+            <tr>
+                <td>Controller Action Name:</td>
+                <td><?php echo $this->getControllerActionName() ?></td>
+            </tr>
+            <tr>
+                <td>Current Package:</td>
+                <td><?php echo $this->getPackageName() ?></td>
+            </tr>
+
+            <?php if($this->shouldShowThemeType('template')): ?>
+            <tr>
+                <td>Template Files Theme:</td>
+                <td><?php echo $this->getTemplateTheme() ?></td>
+            </tr>
+            <?php endif; ?>
+
+            <?php if($this->shouldShowThemeType('skin')): ?>
+            <tr>
+                <td>Skin Files Theme:</td>
+                <td><?php echo $this->getSkinTheme() ?></td>
+            </tr>
+            <?php endif; ?>
+
+            <?php if($this->shouldShowThemeType('layout')): ?>
+            <tr>
+                <td>Layout Files Theme:</td>
+                <td><?php echo $this->getLayoutTheme() ?></td>
+            </tr>
+            <?php endif; ?>
+
+            <?php if($this->shouldShowThemeType('locale')): ?>
+            <tr>
+                <td>Locale Files Theme: (a.k.a translations)</td>
+                <td><?php echo $this->getLocaleTheme() ?></td>
+            </tr>
+            <?php endif; ?>
+
+            <tr>
+                <td>Fallback Theme: (this is the main theme)</td>
+                <td><?php echo $this->getMainTheme() ?></td>
+            </tr>
+
+            <tr>
+                <td>Main Handle:</td>
+                <td><?php echo $this->getFullActionName() ?></td>
+            </tr>
+            <tr>
+                <td>Handles:</td>
+                <td>
+                    <?php foreach($this->getHandles() as $handle): ?>
+                        <?php echo $handle ?><br />
+                    <?php endforeach; ?>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="field-label note">Note: Design exceptions are not shown above. This may influence the theme.</div>
+</div>

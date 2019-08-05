@@ -1,0 +1,46 @@
+/* this is apartment form.css */
+
+.buttons-set a.button, .buttons-set button.button {
+    float: left;
+}
+
+p.required {
+    text-align: left;
+}
+
+
+#apartmentFormContainer {
+    position: relative;
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    padding: 5px;
+    min-height: 400px;
+}
+
+#apartmentFormContainer h1.headline {
+    margin-bottom: 20px;
+}
+
+.apartmentFieldContainer {
+    position: relative;
+    display: block;
+    width: 98.5%;
+    margin: 0 auto 5px auto;
+    padding: 0;
+    min-height: 20px;
+}
+
+.apartmentFieldLabel {
+    position: relative;
+    float: left;
+    width: 45%;
+    min-height: 20px;
+}
+
+.apartmentFieldInput {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 20px;
+}

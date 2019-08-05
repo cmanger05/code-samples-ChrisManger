@@ -1,0 +1,1 @@
+This application is a video store simulation.  The number of customers who visit the store each day is randomly generated as well as the videos they choose to rent.  Each customer can only check out three videos at a time.  Please see the document "Requirements.pdf".

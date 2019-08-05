@@ -1,0 +1,29 @@
+<?php
+/**
+ * @category    Productinformation
+ * @package     Magenifieddebugging
+ * @author   	Chris Manger (chris-manger.com)
+ *
+ * @var $helper Magenifieddebugging_Productinformation_Helper_Data
+ * @var $this Magenifieddebugging_Productinformation_Block_List
+ */
+$helper = Mage::helper('magenifieddebugging_productinformation');
+?>
+<h1>List of Products on this Page</h1>
+<table id="debugger-product-information" class="table table-striped" border="3">
+    <tr>
+        <th>Name</th>
+        <th>Sku</th>
+        <th>Product ID</th>
+        <th>Child Products</th>
+    </tr>
+<?php /* @var $product Mage_Catalog_Model_Product */ ?>
+<?php foreach($this->getProductCollection() as $product): ?>
+    <tr>
+        <td><?php echo $product->getName() ?></td>
+        <td><?php echo $product->getSku() ?></td>
+        <td><?php echo $product->getId() ?></td>
+        <td><?php echo $this->renderChildProducts($product) ?></td>
+    </tr>
+<?php endforeach; ?>
+</table>

@@ -1,0 +1,68 @@
+<?php
+/**
+ * @category    Blockinformation
+ * @package     Magenifieddebugging
+ * @author   	Chris Manger (chris-manger.com)
+ *
+ * @var $this Magenifieddebugging_Blockinformation_Block_Search_Name
+ */
+?>
+<div class="blockFormWrapper">
+    <div class="blockInformationFormContainer">
+        <?php $searchFieldName = $this->getFormName(); //search field given same name as the form ?>
+        <form method="post" name="<?php echo $this->getFormName() ?>">
+            <table class="search-block-form">
+                <tr>
+                    <td class="search-form-title"><label for="<?php echo $searchFieldName ?>"><?php echo $this->getFormTitle() ?></label></td>
+                    <td class="search-form-input"><input title="search by <?php echo $this->getFormTitle() ?>" type="text" name="<?php echo $searchFieldName ?>" value="<?php echo $this->getPostedValue() ?>" /></td>
+                    <td><input type="submit" value="Search" /></td>
+                </tr>
+            </table>
+            <input type="hidden" name="<?php echo $this->getFieldWithFormName() ?>" value="<?php echo $this->getFormName() ?>" />
+        </form>
+
+        <?php if($this->isMatchValid()): ?>
+            <?php $match = $this->getMatch(); ?>
+            <div class="results-container">
+                <div class="field-container results">
+                    <div class="field-section-title">Results</div>
+                </div>
+                <div class="field-container results">
+                    <div class="result-label">Block Name:</div>
+                    <div class="result-value"><?php echo $match->getBlockName() ?></div>
+                </div>
+                <div class="field-container results">
+                    <div class="result-label">Class Name:</div>
+                    <div class="result-value"><?php echo $match->getClassName() ?></div>
+                </div>
+                <div class="field-container results">
+                    <div class="result-label">Template File Name:</div>
+                    <div class="result-value"><?php echo $match->getTemplateFileName() ?></div>
+                </div>
+                <div class="field-container results">
+                    <div class="result-label">Layout XML File Name(s):</div>
+                    <div class="result-value"><?php echo $match->getLayoutXmlFileNames() ?></div>
+                </div>
+                <div class="field-container results">
+                    <div class="result-label">Block Rewrite Node:</div>
+                    <div class="result-value"><?php echo $match->getBlockRewriteNode() ?></div>
+                </div>
+                <div class="field-container results">
+                    <div class="result-label">Parent Block Name:</div>
+                    <div class="result-value"><?php echo $match->getParentBlockName() ?></div>
+                </div>
+                <div class="field-container">
+                    <div class="field-label note">Note: The layout XML Filename is an educated guess.<br />
+                        A small percentage of the time it will not be right.</div>
+                </div>
+            </div>
+        <?php elseif($this->hasValidationError()): ?>
+            <br class="float-clearer" />
+            <div class="validation-error-container">
+                <?php foreach($this->getValidationErrors() as $validationError): ?>
+                    <div><?php echo $validationError ?></div>
+                <?php endforeach; ?>
+            </div>
+        <?php endif ?>
+    </div>
+</div>

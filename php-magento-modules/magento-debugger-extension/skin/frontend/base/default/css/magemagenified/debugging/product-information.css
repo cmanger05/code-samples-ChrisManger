@@ -1,0 +1,9 @@
+#debugger-product-information th {
+    background: #666;
+    color: #FFF;
+    text-align: center;
+}
+
+#debugger-product-information td, #debugger-product-information th {
+    padding: 6px 8px;
+}

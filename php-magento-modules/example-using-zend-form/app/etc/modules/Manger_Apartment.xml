@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Manger_Apartment>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Manger_Apartment>
+    </modules>
+</config>

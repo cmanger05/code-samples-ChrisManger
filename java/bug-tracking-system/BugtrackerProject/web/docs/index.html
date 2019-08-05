@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Group B Bug Tracking System</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/BugtrackerProject/css/master.css">
+        <link rel="stylesheet" type="text/css" href="/BugtrackerProject/css/gitpage.css">
+    </head>
+    <body>
+        <div id="mainContainer">
+            <h1>Group B Bug Tracking System</h1>
+            <p class="disclaimer"><span class="note">Please note:</span> all pages in this system use a servlet that then dictates
+            what jsp file is displayed.  For this reason, this is the only static page on
+            the site and therefore is the only page capable of being displayed as a &#8220;Github Page&#8221;.</p>
+            <p class="disclaimer"><span class="note">Please note:</span> the word ticket is used throughout this project instead of bug.  The word ticket is broader in its scope, and this
+            system could be used for administering a project so therefore the word ticket was chosen since it is more all encompassing.</p>
+            
+            <h3>Structural Integrity of the Project</h3>
+            <ul>
+                <li>The database is normalized. Also, keys, constraints, and indexes have been created every time one is needed. 
+                    This prevents orphaned records and all other database anomalies.</li>
+                <li>Allows users to login, view tickets, filter tickets, create tickets, and edit tickets.</li>
+                <li>The pages are dynamically designed. JSP is used to render lists and drop down menus from the database.
+                    Also, the edit ticket page has the same url as the create ticket page.  A get variable determines which one is displayed.</li>
+                <li>The architectural design allows for this code to be reused and extended.</li>
+                <li>All forms are heavily validated. Error messages will be displayed for many different possible outcomes.</li>
+                <li>If a user uses a development tool to inject values where it would be impossible for a regular user to do so,
+                    the system understands its an invalid request.
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

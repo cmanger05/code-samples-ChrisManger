@@ -1,0 +1,5 @@
+build/web/WEB-INF/*
+nbproject/private/*
+build/*
+dist/*
+!web/WEB-INF/documentation.txt

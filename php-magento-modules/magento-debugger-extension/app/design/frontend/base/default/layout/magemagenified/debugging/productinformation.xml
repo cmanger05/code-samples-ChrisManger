@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<layout>
+    <default>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/magemagenified/debugging/product-information.css</stylesheet></action>
+        </reference>
+    </default>
+
+    <magemagenified_debugging_forms>
+        <reference name="debugging_forms_container">
+            <block type="magenifieddebugging_productinformation/list" name="display.plp.information" template="magemagenified/debugging/productinformation/list.phtml" />
+        </reference>
+    </magemagenified_debugging_forms>
+</layout>

@@ -1,0 +1,20 @@
+<?php
+/**
+ * @category    Productinformation
+ * @package     Magenifieddebugging
+ * @author   	Chris Manger (chris-manger.com)
+ *
+ * @var $helper Magenifieddebugging_Productinformation_Helper_Data
+ * @var $this Magenifieddebugging_Productinformation_Block_List_Children
+ * @var $product Mage_Catalog_Model_Product
+ */
+$helper = Mage::helper('magenifieddebugging_productinformation');
+?>
+<table>
+<?php foreach($this->getChildProductsCollection() as $product): ?>
+    <tr>
+        <td><a target="_blank" href="<?php echo $helper->getProductUrl($product) ?>"><?php echo $product->getSku() ?></a></td>
+        <td>(Qty: <?php echo $this->getQty($product) ?>)</td>
+    </tr>
+<?php endforeach; ?>
+</table>

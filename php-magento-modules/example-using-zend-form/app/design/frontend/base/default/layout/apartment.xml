@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<layout>
+    <apartment_index_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="head">
+            <action method="addCss"><stylesheet>apartment/form.css</stylesheet></action>
+        </reference>
+        <reference name="content">
+            <block type="core/template" name="apartment.form" template="apartment/form.phtml" />
+        </reference>
+    </apartment_index_index>
+
+    <apartment_thankyou_index>
+        <reference name="content">
+            <block type="core/template" name="apartment.thankyou" template="apartment/thankyou.phtml" />
+        </reference>
+    </apartment_thankyou_index>
+</layout>

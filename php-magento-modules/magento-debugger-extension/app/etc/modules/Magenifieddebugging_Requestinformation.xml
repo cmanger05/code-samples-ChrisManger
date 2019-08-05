@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Magenifieddebugging_Requestinformation>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Magenifieddebugging_Base/>
+            </depends>
+        </Magenifieddebugging_Requestinformation>
+    </modules>
+</config>

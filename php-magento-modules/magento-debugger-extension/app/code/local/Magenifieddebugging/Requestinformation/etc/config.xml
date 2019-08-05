@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <global>
+        <blocks>
+            <mmdebugging_requestinformation>
+                <class>Magenifieddebugging_Requestinformation_Block</class>
+            </mmdebugging_requestinformation>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <mmdebugging_requestinformation>
+                    <file>magemagenified/debugging/requestinformation.xml</file>
+                </mmdebugging_requestinformation>
+            </updates>
+        </layout>
+    </frontend>
+</config>
