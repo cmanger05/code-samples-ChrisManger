@@ -1,1 +1,0 @@
-The only reason this file exists, is that netbeans expects the WEB-INFO directory to exist, and on some peoples machine this directory will not automatically be created.  If it is not automatically created the program will not run at all, this prevents this error from occurring.
